@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to Main Content</a>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <div class="nav-brand">My Favorite Animals</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="gallery.html" aria-current="page">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-heading" aria-labelledby="page-title">
+            <p class="eyebrow">A COLLECTION OF ANIMALS</p>
+            <h1 id="page-title">Animal Gallery</h1>
+            <p>Use the controls to browse the carousel. Select an image to view more information.</p>
+        </section>
+
+        <section class="carousel" aria-labelledby="carousel-title">
+            <h2 id="carousel-title" class="visually-hidden">Animal image carousel</h2>
+            <div class="carousel-viewport">
+                <section class="gallery" aria-label="Animal gallery">
+                    <figure class="is-active">
+                        <img src="Dog.jpg" alt="Illustration of a friendly dog">
+                        <figcaption>Dog</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Cat.jpg" alt="Illustration of a cute cat">
+                        <figcaption>Cat</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Rabbit.jpg" alt="Illustration of a rabbit">
+                        <figcaption>Rabbit</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Panda.webp" alt="Illustration of a panda">
+                        <figcaption>Panda</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Fox.jpg" alt="Illustration of a fox">
+                        <figcaption>Fox</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="Penguin.jpg" alt="Illustration of a penguin">
+                        <figcaption>Penguin</figcaption>
+                    </figure>
+                </section>
+            </div>
+
+            <div class="carousel-controls" aria-label="Carousel controls">
+                <button id="carousel-prev" type="button" aria-label="Show previous animal">&#8592; Previous</button>
+                <p id="carousel-status" class="carousel-status" aria-live="polite">Showing Dog, image 1 of 6</p>
+                <button id="carousel-next" type="button" aria-label="Show next animal">Next &#8594;</button>
+            </div>
+            <p class="keyboard-help">Tip: use the Left and Right Arrow keys to browse the images.</p>
+        </section>
+    </main>
+
+    <div class="modal" id="animal-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close" type="button" aria-label="Close animal details">&times;</button>
+            <img id="modal-image" src="Dog.jpg" alt="" class="modal-image">
+            <div class="modal-body">
+                <h2 id="modal-title">Animal</h2>
+                <p id="modal-text">Animal information.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Favorite Animals</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
